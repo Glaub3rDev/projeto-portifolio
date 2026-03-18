@@ -98,17 +98,11 @@ section#ficha h1 {
   text-align: center;
 }
 
-#social {
+div#social {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.50em;
-  gap: 10px;
+  font-size: 1.5em;
+  gap: 15px;
   margin-top: 15px;
-}
-
-#social:hover {
-  color: var(--destaque-inverso);
-  transition: all 0.5s;
-  text-decoration: underline;
 }
