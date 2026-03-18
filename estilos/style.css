@@ -27,6 +27,18 @@ body {
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: all 0.5s;
+}
+
+body.escuro {
+  --fundo-principal: #0a0a0a;   /* preto real */
+  --texto: #eaeaea;             /* branco suave */
+  --texto-inverso: #0a0a0a;
+
+  --destaque: #8BAE66;          /* teu verde (agora só destaque) */
+  --destaque-inverso: #6f8f52;
+
+  --fundo-card: #141414;        /* leve separação */
 }
 
 header {
@@ -36,6 +48,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav#menu ul {
@@ -183,7 +198,7 @@ align-items: center;
   border-radius: 4px;
 }
 
-#formacao-container {
+.formacao-container{
   display: flex;
   flex-direction: column-reverse;
   gap: 15px;
@@ -267,6 +282,37 @@ footer a:hover {
 
 
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
+  article#video .video-container {
+    position: relative;
+    width: 65%;
+    margin: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
