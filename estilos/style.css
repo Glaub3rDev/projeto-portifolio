@@ -278,9 +278,29 @@ footer a:hover {
   color: var(--destaque-inverso);
 }
 
+/** manutenções **/
+.projeto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+.projeto-link {
+  padding: 3px 15px 3px;
+  margin-top: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--texto);
+  background-color: var(--destaque-inverso);
+  transition: all 0.5s;
+  font-weight: bold;
+}
 
-
+.projeto-link:hover {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+}
+/**------------**/
 @media screen and (min-width: 768px) {
   main {
     grid-template-columns: auto 300px 1fr auto;
